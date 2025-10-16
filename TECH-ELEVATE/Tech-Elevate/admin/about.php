@@ -1,0 +1,5 @@
+<?php session_start(); require '../dbconnect.php'; if(!isset($_SESSION['user'])||$_SESSION['user']['role']!=='admin'){ header('Location: ../login.php'); exit; } ?>
+<!doctype html><html><head><link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<div class="sidebar"><div class="brand">Tech-Elevate</div><nav><a href="manage_users.php">Users</a><a href="view_projects.php">Projects</a><a href="activity_log.php">Activity Log</a><a href="about.php" class="active">About System</a></nav><div class="sidebar-foot">Group 1 Team Elevate</div></div>
+<div class="main"><div class="header-bar"><div>About System</div><div><a class="btn" href="../logout.php">Logout</a></div></div>
+<div class="container"><div class="center-card neon-card"><h2>Tech-Elevate: IT Student's Skill and Project Repository</h2><p>Purpose: Allow IT students to upload projects, showcase skills, and let admins manage accounts and projects.</p><p>Features include registration, profile editing, project uploads, admin management (soft-delete & restore), and password reset.</p><p>Credits: Group 1 Team Elevate</p></div></div></div></body></html>
